@@ -1,0 +1,143 @@
+@use 'variables' as v;
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &-con {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 1199.98px) {
+      justify-content: space-between;
+    }
+  }
+
+  &-logo {
+    color: var(--main-text-color);
+    font-family: v.$font-logo;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.38;
+    letter-spacing: 0.78px;
+    margin-right: 93px;
+  }
+
+  &_list {
+    display: flex;
+    gap: 50px;
+  }
+
+  &_item {
+    color: var(--main-text-color);
+    font-family: v.$font-main;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--hover-color);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transition: transform 0.25s ease;
+    }
+
+    &:hover {
+      color: var(--hover-color);
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &_svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--addtext-color);
+    transition: fill 0.2s;
+  }
+
+  &_menu {
+    display: none;
+
+    @media screen and (max-width: 767.98px) {
+      display: inline;
+      width: 24px;
+      height: 16px;
+      fill: var(--logo-color);
+    }
+  }
+}
+
+.studio {
+  color: var(--main-text-color);
+}
+
+.navigate {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+}
+
+.contact {
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+
+  @media screen and (max-width: 1199.98px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+
+  &_li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:hover {
+      .contact_list {
+        color: var(--hover-color);
+      }
+
+      .header_svg {
+        fill: var(--hover-color);
+      }
+    }
+  }
+
+  &_list {
+    color: var(--addtext-color);
+    font-family: v.$font-main;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.38;
+    letter-spacing: 0.28px;
+    transition: color 0.2s;
+  }
+}

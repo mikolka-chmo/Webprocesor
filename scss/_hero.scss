@@ -1,0 +1,68 @@
+@use 'variables' as v;
+
+.hero {
+  padding-top: 200px;
+  padding-bottom: 280px;
+  text-align: center;
+  background-image: url('../css/img/destop/hero-desctop1x.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    background-image: url('../css/img/tablet/hero-tablet1x.webp');
+    padding-top: 118px;
+    padding-bottom: 198px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    background-image: url('../css/img/mobile/hero-mobile1x.webp');
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+
+  &_text {
+    color: var(--main-color);
+    font-family: v.$font-main;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 2.64px;
+    width: 696px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 1199.98px) {
+      width: 100%;
+      max-width: 360px;
+      font-size: 26px;
+      line-height: 1.62;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      max-width: 528px;
+      font-size: 36px;
+    }
+  }
+
+  &_button {
+    font-weight: 900;
+    color: var(--main-color);
+    border-radius: 4px;
+    background: var(--hover-color);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    padding: 10px 32px;
+  }
+}
+
+.button-text {
+  color: var(--main-color);
+  text-align: center;
+  font-family: v.$font-main;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 30px;
+  letter-spacing: 0.96px;
+}

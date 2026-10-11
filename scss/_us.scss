@@ -1,0 +1,77 @@
+@use 'variables' as v;
+
+.us {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &_minitext {
+    display: flex;
+    gap: 30px;
+
+    @media screen and (max-width: 1199.98px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &_div {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background: var(--team-background-color);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 767.98px) {
+      height: 116px;
+    }
+  }
+
+  &_svg {
+    width: 65.3px;
+    height: 70px;
+  }
+}
+
+.minitext {
+  @media screen and (max-width: 1199.98px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.gen_minitext {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: var(--main-text-color);
+  font-family: v.$font-main;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 767.98px) {
+    text-align: center;
+  }
+}
+
+.secondary_minitext {
+  @media screen and (max-width: 767.98px) {
+    text-align: left;
+  }
+}
