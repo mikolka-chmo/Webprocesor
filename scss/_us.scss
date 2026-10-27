@@ -44,7 +44,10 @@
 
 .minitext {
   @media screen and (max-width: 1199.98px) {
-    width: 100%;
+   width: 270.0px;
+
+
+
   }
 
   @media screen and (max-width: 767.98px) {
@@ -54,8 +57,8 @@
 }
 
 .gen_minitext {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  width: 270.0px;
+
   color: var(--main-text-color);
   font-family: v.$font-main;
   font-size: 14px;
@@ -71,6 +74,14 @@
 }
 
 .secondary_minitext {
+  color: #757575;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.42px;
+
   @media screen and (max-width: 767.98px) {
     text-align: left;
   }

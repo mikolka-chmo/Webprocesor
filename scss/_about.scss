@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use "variables" as v;
 
 .about {
   padding-top: 94px;
@@ -11,7 +11,10 @@
   }
 
   &_div {
-    width: 370px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     height: 70px;
     background: rgba(47, 48, 58, 0.8);
     display: flex;
@@ -41,17 +44,31 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1.08px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }
 
 .us-list {
   display: flex;
   flex-direction: row;
   gap: 30px;
+  margin-top: 50px;
 }
 
 .us-img {
-  margin-top: 50px;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about_li {
+  position: relative;
   width: 370px;
   height: 294px;
 }
